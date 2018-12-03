@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="update_synch=true" extends="sys_metadata" label="CryptoFileService" max_length="40" name="x_165838_cryptofs_cryptofileservice" type="collection">
+        <element default="true" label="Active" max_length="10" name="active" type="boolean"/>
+        <element choice="1" default="CryptoFS" label="Application" max_length="200" name="application" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="CryptoFS" sequence="0" value="CryptoFS"/>
+            </choice>
+        </element>
+        <element label="Content" max_length="5000000" name="content" type="string"/>
+        <element choice="1" label="MIME-TYPE" max_length="200" name="mime_type" type="choice">
+            <choice>
+                <element inactive_on_update="false" label="application/javascript" sequence="0" value="application/javascript"/>
+                <element inactive_on_update="false" label="text/html" sequence="1" value="text/html"/>
+                <element inactive_on_update="false" label="text/css" sequence="2" value="text/css"/>
+                <element inactive_on_update="false" label="application/xml" sequence="3" value="application/xml"/>
+                <element inactive_on_update="false" label="image/png" sequence="4" value="image/png"/>
+                <element inactive_on_update="false" label="image/jpeg" sequence="5" value="image/jpeg"/>
+                <element inactive_on_update="false" label="application/pdf" sequence="7" value="application/pdf"/>
+            </choice>
+        </element>
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Path" max_length="1000" name="path" type="string"/>
+    </element>
+</database>

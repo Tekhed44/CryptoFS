@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_number">
+    <sys_number action="INSERT_OR_UPDATE">
+        <category display_value="" name="x_165838_cryptofs_cryptofileservice">x_165838_cryptofs_cryptofileservice</category>
+        <maximum_digits>7</maximum_digits>
+        <number>1000</number>
+        <prefix>CRYPTO</prefix>
+        <sys_class_name>sys_number</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-03 03:54:46</sys_created_on>
+        <sys_id>39251f87db022300273871efbf9619df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>CRYPTO</sys_name>
+        <sys_package display_value="CryptoFS" source="x_165838_cryptofs">be94dfc7db022300273871efbf9619b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CryptoFS">be94dfc7db022300273871efbf9619b6</sys_scope>
+        <sys_update_name>sys_number_39251f87db022300273871efbf9619df</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-03 03:54:46</sys_updated_on>
+    </sys_number>
+</record_update>

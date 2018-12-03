@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>FileServices</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	//setup REST response
+	var writer = response.getStreamWriter();
+	var path = request.queryString;	
+
+	//process
+	var KeyHole = new CryptoMadness();
+	var nt = KeyHole.FileServe(path);
+	var Talent = JSON.parse(nt);
+
+	//file response
+	response.setContentType(Talent.mimetype);
+	response.setStatus(200);
+	writer.writeString(Talent.bdy);
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/x_165838_cryptofs/cryptofs/FileService</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>true</produces_customized>
+        <relative_path>/FileService</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>false</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2018-12-03 04:35:43</sys_created_on>
+        <sys_id>2cbc1b4fdb022300273871efbf961914</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_name>FileServices</sys_name>
+        <sys_package display_value="CryptoFS" source="x_165838_cryptofs">be94dfc7db022300273871efbf9619b6</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="CryptoFS">be94dfc7db022300273871efbf9619b6</sys_scope>
+        <sys_update_name>sys_ws_operation_2cbc1b4fdb022300273871efbf961914</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2018-12-03 06:35:36</sys_updated_on>
+        <web_service_definition display_value="CryptoFS">333a138fdb022300273871efbf961950</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
